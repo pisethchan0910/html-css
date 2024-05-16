@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="component/dropdown/dropdown.css">
+    <link rel="stylesheet" href="component/table/table.css">
+    <link rel="stylesheet" href="component/modal/modal.css">
+    <link rel="stylesheet" href="component/nav/nav.css">
+    <link rel="stylesheet" href="component/modal/confirmation.css">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+</head>
+
+<body>
+    <main>
+        <div class="container-wrapper">
+            <div class="header">
+                <label class="label-large">회원상세</label>
+                <label class="label-small">필수항목</label>
+            </div>
+            <hr>
+            <div id="nav"></div>
+
+            <section class="container">
+                <div class="left-wrapper g-8px">
+                    <span class="large-text">신청 목록</span>
+                    <span class="small-text">(총 100명 | 승인대기 <span class="styled-number">1</span>건)</span>
+                </div>
+                <div class="right-wrapper g-4px">
+                    <div id="dropdown1" class="custom-select">
+                        <button class="select-button" role="combobox" aria-labelledby="select button"
+                            aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                            <span class="selected-value">승인여부 전체</span>
+                            <img src="assets/icon/dropdown-arrow.svg" alt="Dropdown arrow" class="arrow">
+                        </button>
+                        <ul class="select-dropdown" role="listbox"> </ul>
+                    </div>
+
+                    <div id="dropdown2" class="custom-select">
+                        <button class="select-button" role="combobox" aria-labelledby="select button"
+                            aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                            <span class="selected-value">신청일시순</span>
+                            <img src="assets/icon/dropdown-arrow.svg" alt="Dropdown arrow" class="arrow">
+                        </button>
+                        <ul class="select-dropdown" role="listbox"> </ul>
+                    </div>
+
+                    <div id="dropdown3" class="custom-select">
+                        <button class="select-button" role="combobox" aria-labelledby="select button"
+                            aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                            <span class="selected-value">50개씩 보기</span>
+                            <img src="assets/icon/dropdown-arrow.svg" alt="Dropdown arrow" class="arrow">
+                        </button>
+                        <ul class="select-dropdown" role="listbox"> </ul>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section class="container mb-10px">
+                <div class="left-wrapper g-8px">
+                    <button id="register" class="btn-primary">등록</button>
+                </div>
+                <div class="right-wrapper g-8px">
+                    <label class="small-text faded">선택한 0건</label>
+                    <div id="dropdown4" class="custom-select">
+                        <button class="select-button" role="combobox" aria-labelledby="select button"
+                            aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                            <span class="selected-value">승인상태 변경</span>
+                            <img src="assets/icon/dropdown-arrow.svg" alt="Dropdown arrow" class="arrow">
+                        </button>
+                        <ul class="select-dropdown" role="listbox"> </ul>
+                    </div>
+                    <button id="save" class="btn-primary">저장</button>
+                </div>
+            </section>
+            <div class="table-wrapper">
+                <table id="myTable" class="data-table"> </table>
+            </div>
+            <div id="pagination" class="pagination"> </div>
+    </main>
+
+    <div id="registerPopup"></div>
+
+    <div id="confirmPopup"></div>
+
+    </div>
+    <script src="component/table/table-data.js"></script>
+    <script src="component/dropdown/dropdown.js"></script>
+    <script src="component/modal/register-modal.js"></script>
+    <script src="component/nav/nav.js"></script>
+    <script src="component/modal/confirmation.js"></script>
+</body>
+
+</html>

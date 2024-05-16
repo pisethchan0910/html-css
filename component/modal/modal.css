@@ -1,0 +1,172 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  border: 1px solid #888;
+  width: 800px;
+  margin: auto;
+}
+
+.modal-header,
+.modal-middle,
+.modal-footer {
+  padding: 20px;
+}
+
+.modal-header {
+  height: 72px;
+}
+
+.modal-middle {
+  height: 490px;
+  border-top: 1px solid #d7d8da;
+  padding: 20px 24px 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  padding: 24px 0;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-btn {
+  width: 160px;
+  height: 44px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.modal-btn.primary {
+  color: white;
+  background-color: #2a3958;
+}
+
+.modal-btn.secondary {
+  color: #2a3958;
+  background-color: white;
+  border-color: #2a3958;
+}
+
+hr.divider-wrap {
+  border-top: 1px solid #d7d8da;
+  margin: 0;
+}
+
+.modal-table {
+  border: 1px solid #d7d8da;
+  border-collapse: collapse;
+}
+
+.modal-table td:first-child {
+  border-bottom: 1px solid white;
+  background-color: lightgray;
+}
+
+.modal-table tr:last-child td:first-child {
+  border-bottom: none;
+}
+
+.modal-table td:last-child {
+  background-color: white;
+}
+
+.modal-table tr {
+  height: 49px;
+}
+
+.right-col {
+  border: 1px solid #d7d8da;
+  padding: 16px;
+}
+
+.right-col input[type="checkbox"],
+.right-col label,
+input[type="checkbox"],
+label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 4px 0;
+}
+
+.right-col input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid #d7d8da;
+  background: #fff;
+  position: relative;
+}
+
+.right-col input[type="checkbox"]:checked {
+  background: #2a3958 url(../../assets/icon/check.svg) no-repeat center center;
+  background-size: 50%;
+}
+
+.right-col label {
+  margin-left: 8px;
+}
+
+.right-col #textarea1 {
+  width: 552px;
+  height: 100px;
+  border-radius: 8px;
+  border: 1px solid #b1b4bb;
+  margin-top: 4px;
+  padding: 12px 12px 0;
+}
+
+textarea:disabled {
+  background-color: #dde0e5;
+}
+
+.left-col {
+  background-color: #eef0f4 !important;
+  padding-left: 16px;
+  width: 160px;
+  font-weight: 500;
+}
+
+.dot-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dot-container::after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: red;
+}

@@ -1,0 +1,31 @@
+.nav {
+  background-color: #ebeef3;
+  margin-bottom: 43.2px;
+}
+
+.nav-menu {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  float: left;
+  width: 130px;
+  text-align: center;
+}
+
+.nav-item a {
+  display: block;
+  color: #b1b4bb;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+  background-color: #2a3958;
+  color: white;
+}

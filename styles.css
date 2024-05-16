@@ -1,0 +1,138 @@
+:root {
+  --light-grey: #eef0f4;
+  --medium-grey: #ebeef3;
+  --dark-grey: #dde0e5;
+  --black: #000;
+  --white: #fff;
+  --green: #4caf50;
+  --light-gray: #ddd;
+  --primary: #2a3958;
+  --font-family: Pretendard, "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: var(--font-family);
+}
+
+.container-wrapper {
+  width: 1170px;
+}
+
+.container,
+.left-wrapper,
+.right-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.left-wrapper,
+.right-wrapper {
+  flex: 1;
+}
+
+.right-wrapper {
+  justify-content: flex-end;
+}
+
+.mb-10px {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 39px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.2px;
+  cursor: pointer;
+}
+
+.g-4px {
+  gap: 4px;
+}
+
+.g-8px {
+  gap: 8px;
+}
+
+.g-10px {
+  gap: 10px;
+}
+
+.line {
+  height: 1px;
+  background-color: var(--black);
+}
+
+.faded {
+  color: #5a616a;
+}
+
+.small-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.71px;
+}
+
+.large-text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23.87px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+
+.label-large {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.64px;
+  color: #0b101a;
+}
+
+.label-small {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #ff4d4f;
+  position: relative;
+  padding-left: 10px;
+}
+
+.styled-number {
+  color: #ff4d4f;
+  text-decoration: underline;
+}
+
+.label-small::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #ff4d4f;
+  border-radius: 50%;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #d7d8da;
+}

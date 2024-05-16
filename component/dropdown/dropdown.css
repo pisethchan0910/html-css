@@ -1,0 +1,119 @@
+.custom-select {
+  position: relative;
+  width: 150.15px;
+  max-width: 100%;
+  height: 100%;
+}
+
+.select-button {
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 150.15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  align-items: center;
+  height: 100%;
+}
+
+.selected-value {
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.arrow {
+  padding-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.select-dropdown {
+  position: absolute;
+  list-style: none;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 8px;
+  padding: 0;
+  margin-top: 10px;
+  max-height: 200px;
+  transition: 0.5s ease;
+  transform: scaleY(0);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.select-dropdown:focus-within {
+  box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
+}
+
+.select-dropdown li {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 16px;
+}
+
+.select-dropdown li label {
+  width: 100%;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.select-dropdown::-webkit-scrollbar {
+  width: 7px;
+}
+.select-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.select-dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+.select-dropdown li:hover,
+.select-dropdown input:checked ~ label {
+  background-color: #2a3958;
+  color: white;
+}
+
+.select-dropdown li:first-child:hover {
+  border-radius: 8px 8px 0 0;
+}
+
+.select-dropdown li:last-child:hover {
+  border-radius: 0 0 8px 8px;
+}
+
+.select-dropdown input:focus ~ label {
+  background-color: #dfdfdf;
+}
+
+.select-dropdown input[type="radio"] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
+/* interactivity */
+
+.custom-select.active .arrow {
+  transform: scaleY(-1);
+  transform-origin: center;
+}
+
+.custom-select.active .select-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+  z-index: 100;
+}
